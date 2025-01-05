@@ -1,4 +1,4 @@
-package net.sostaric.geminidemo.ui.notifications
+package net.sostaric.geminidemo.ui.text
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,11 +7,11 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import net.sostaric.geminidemo.databinding.FragmentNotificationsBinding
+import net.sostaric.geminidemo.databinding.FragmentTextBinding
 
-class NotificationsFragment : Fragment() {
+class TextFragment : Fragment() {
 
-    private var _binding: FragmentNotificationsBinding? = null
+    private var _binding: FragmentTextBinding? = null
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -22,14 +22,14 @@ class NotificationsFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val notificationsViewModel =
-            ViewModelProvider(this).get(NotificationsViewModel::class.java)
+        val textViewModel =
+            ViewModelProvider(this).get(TextViewModel::class.java)
 
-        _binding = FragmentNotificationsBinding.inflate(inflater, container, false)
+        _binding = FragmentTextBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        val textView: TextView = binding.textNotifications
-        notificationsViewModel.text.observe(viewLifecycleOwner) {
+        val textView: TextView = binding.textHome
+        textViewModel.text.observe(viewLifecycleOwner) {
             textView.text = it
         }
         return root

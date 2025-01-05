@@ -1,10 +1,10 @@
-package net.sostaric.geminidemo.ui.notifications
+package net.sostaric.geminidemo.ui.image
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
-class NotificationsViewModel : ViewModel() {
+class ImageViewModel : ViewModel() {
 
     private val _text = MutableLiveData<String>().apply {
         value = "This is notifications Fragment"
