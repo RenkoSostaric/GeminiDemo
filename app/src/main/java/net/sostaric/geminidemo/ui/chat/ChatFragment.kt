@@ -4,39 +4,27 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
+import androidx.compose.material3.Surface
+import androidx.compose.ui.platform.ComposeView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import net.sostaric.geminidemo.databinding.FragmentChatBinding
+import net.sostaric.geminidemo.GenerativeAiViewModelFactory
 
 class ChatFragment : Fragment() {
-
-    private var _binding: FragmentChatBinding? = null
-
-    // This property is only valid between onCreateView and
-    // onDestroyView.
-    private val binding get() = _binding!!
-
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val chatViewModel =
-            ViewModelProvider(this).get(ChatViewModel::class.java)
+        val chatViewModel = ViewModelProvider(this, GenerativeAiViewModelFactory)
+            .get(ChatViewModel::class.java)
 
-        _binding = FragmentChatBinding.inflate(inflater, container, false)
-        val root: View = binding.root
-
-        val textView: TextView = binding.textDashboard
-        chatViewModel.text.observe(viewLifecycleOwner) {
-            textView.text = it
+        return ComposeView(requireContext()).apply {
+            setContent {
+                Surface {
+                    ChatRoute(chatViewModel)
+                }
+            }
         }
-        return root
-    }
-
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
     }
 }
