@@ -29,7 +29,7 @@ val GenerativeAiViewModelFactory = object : ViewModelProvider.Factory {
                     TextViewModel(generativeModel)
                 }
 
-/*                 isAssignableFrom(ImageViewModel::class.java) -> {
+                isAssignableFrom(ImageViewModel::class.java) -> {
                     val generativeModel = GenerativeModel(
                         modelName = "gemini-1.5-flash-latest",
                         apiKey = BuildConfig.apiKey,
@@ -37,7 +37,7 @@ val GenerativeAiViewModelFactory = object : ViewModelProvider.Factory {
                     )
                     ImageViewModel(generativeModel)
                 }
-
+/* 
                 isAssignableFrom(ChatViewModel::class.java) -> {
                     val generativeModel = GenerativeModel(
                         modelName = "gemini-1.5-flash-latest",
@@ -46,8 +46,8 @@ val GenerativeAiViewModelFactory = object : ViewModelProvider.Factory {
                     )
                     ChatViewModel(generativeModel)
                 }
- */
-                else ->
+
+ */                else ->
                     throw IllegalArgumentException("Unknown ViewModel class: ${viewModelClass.name}")
             }
         } as T
