@@ -173,16 +173,6 @@ fun ImageScreen(
                             .padding(all = 16.dp)
                             .fillMaxWidth()
                     ) {
-                        Icon(
-                            Icons.Outlined.Person,
-                            contentDescription = "Person Icon",
-                            tint = MaterialTheme.colorScheme.onSecondary,
-                            modifier = Modifier
-                                .requiredSize(36.dp)
-                                .drawBehind {
-                                    drawCircle(color = Color.White)
-                                }
-                        )
                         Text(
                             text = uiState.outputText,
                             color = MaterialTheme.colorScheme.onSecondary,
