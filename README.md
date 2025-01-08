@@ -55,6 +55,11 @@ Velik kontrast med Android SDK in novim Python Google Gen AI SDK...
 [![Last Commit](https://img.shields.io/github/last-commit/googleapis/python-genai)](https://github.com/googleapis/python-genai/commits/main)
 
 ## 💡 Primeri uporabe
+### Google AI Studio
+Prototipiranje promptov in generacija API ključev
+
+![Google AI Studio](images/ai_studio.png)
+
 ### Shranjevanje API ključa
 app/build.gradle.kts
 ```gradle
