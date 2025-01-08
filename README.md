@@ -60,6 +60,14 @@ Prototipiranje promptov in generacija API ključev
 
 ![Google AI Studio](images/ai_studio.png)
 
+### Integracija v Android aplikacijo
+app/build.gradle.kts
+```gradle
+dependencies {
+    implementation("com.google.ai.client.generativeai:generativeai:0.9.0")
+}
+```
+
 ### Shranjevanje API ključa
 app/build.gradle.kts
 ```gradle
