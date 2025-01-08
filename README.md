@@ -1,8 +1,8 @@
-# Google Gemini API
+# 🤖 Google Gemini API
 
 Google Gemini API je programski vmesnik (API), ki omogoča dostop do Google-ovega najnaprednejšega jezikovnega modela. Gemini lahko generira besedilo, analizira slike, pomaga pri pisanju kode in opravlja številne druge naloge umetne inteligence. API je na voljo preko Google-ove platforme AI Studio ali preko različnih programskih knjižnic za različne programske jezike.
 
-## Google AI Client SDK za Android
+## 📖 Google AI Client SDK za Android
 
 Google AI Client SDK za Android je uradna knjižnica, ki poenostavi razvoj AI funkcionalnosti v Android aplikacijah. Razvijalcem ponuja številne prednosti:
 - **Upravljanje zahtev**: Abstrakcija in avtomatizacija HTTP komunikacije ter klicev
@@ -11,18 +11,18 @@ Google AI Client SDK za Android je uradna knjižnica, ki poenostavi razvoj AI fu
 - **Pogovorni vmesnik**: Namenske funkcije za implementacijo AI Chat
 - **Lokalno izvajanje**: Podpora za procesiranje operacij neposredno na napravi (Gemini Nano + Gemini Edge SDK)
 
-## Prednosti
+## ✅ Prednosti
 - Preprosta implementacija osnovnih funkcionalnosti (Text Generation, Image Reasoning, AI Chat)
 - Podpora za Kotlin Coroutines in Flow
 - Poskrbi za tipe in error handling 
 - Fleksibilnost pri izbiri modelov in konfiguraciji
 
-## Slabosti
+## ❌ Slabosti
 - Mišljeno samo za prototipiranje in ekperimentiranje (za produkcijo Vertex AI in Firebase)
 - Omejena količina dokumentacije specifične za Android
 - Manjkajoča napredna orodja (structured output in grounding)
 
-## Licenca
+## 📜 Licenca
 Google AI Client SDK za Android je na voljo pod **Apache License 2.0**, kar omogoča:
 - Prosto uporabo knjižnice
 - Možnost modifikacije
@@ -39,7 +39,12 @@ Uporaba Gemini modelov preko Gemini API pa ima svoj cenik:
 
 > Opomba: Cene so za prompte krajše od 128K tokenov, za daljše so cene 2x višje
 
-## Vzdrževanje
+## 📊 Statistika
+[![Stars](https://img.shields.io/github/stars/google/generative-ai-android?style=social)](https://github.com/google/generative-ai-android/stargazers)
+[![Forks](https://img.shields.io/github/forks/google/generative-ai-android?style=social)](https://github.com/google/generative-ai-android/network/members)
+[![Watchers](https://img.shields.io/github/watchers/google/generative-ai-android?style=social)](https://github.com/google/generative-ai-android/watchers)
+
+## 🛠️ Vzdrževanje
 Projektu so večinoma kontributirali Google zaposleni, nazadnje avgusta 2024.
 
 [![Contributors](https://img.shields.io/github/contributors/google/generative-ai-android)](https://github.com/google/generative-ai-android/graphs/contributors)
@@ -49,7 +54,7 @@ Projektu so večinoma kontributirali Google zaposleni, nazadnje avgusta 2024.
 Velik kontrast med Android SDK in novim Python Google Gen AI SDK...
 [![Last Commit](https://img.shields.io/github/last-commit/googleapis/python-genai)](https://github.com/googleapis/python-genai/commits/main)
 
-## Primeri uporabe
+## 💡 Primeri uporabe
 ### Shranjevanje API ključa
 app/build.gradle.kts
 ```gradle
@@ -144,7 +149,7 @@ class ChatViewModel : ViewModel() {
     }
 ```
 
-## Integracija v lastno aplikacijo
+## 🔧 Integracija v lastno aplikacijo
 
 ### JSON Schema
 ```kotlin
